@@ -1,0 +1,11 @@
+Package: riverdata.dirty
+Title: AddOn for riverdata package; contains only one function
+Version: 0.1.1.0
+Authors@R: person("Daniel", "Neumann", email = "daniel.neumann@posteo.de", role = c("aut", "cre"))
+Description: Just a dummy description.
+Depends:
+    R (>= 3.2.2)
+    ncdf4
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
