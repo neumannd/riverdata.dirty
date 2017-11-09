@@ -107,6 +107,8 @@ write.river.netCDF = function(riverNames, riverInfo, riverData, netCDF2input, dO
       ncatt_put(ncId, iV, 'river_name', iR)
     }
     
+    
+    # write support variables (lon, lat, depth, time) into the netCDF file
     ncvar_put(ncId, 'longitude', riverInfos[[iR]]$lon)
     ncvar_put(ncId, 'latitude', riverInfos[[iR]]$lat)
     ncvar_put(ncId, 'depth', 0.0)
@@ -115,6 +117,8 @@ write.river.netCDF = function(riverNames, riverInfo, riverData, netCDF2input, dO
                                            substr(riverData[[iR]]$data$time[tIdx],9,10)), format = 'f'),
               start = c(1), count = c(nTime))
     
+    
+    # close netCDF file
     nc_close(ncId)
   
   }
